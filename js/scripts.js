@@ -43,13 +43,13 @@ function langType() {
     langType = "C#";
   }
 
-  const resultDiv = document.getElementById("result");
+  const resultDiv = document.querySelector("#result");
   resultDiv.textContent = "You should learn " + langType + ".";
 
-  document.getElementById("tryAgain").addEventListener("click", function () {
+  document.querySelector("#tryAgain").addEventListener("click", function () {
     let form = document.querySelector("form");
     form.reset();
 
-    document.getElementById("result").innerHTML = "";
+    document.querySelector("#result").innerHTML = "";
   });
 }
