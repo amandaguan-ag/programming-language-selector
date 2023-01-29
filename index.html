@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <title>Programming Language Quiz</title>
   <script src="js/scripts.js"></script>
-  <link href="css/bootstrap.css" rel ="stylesheet" type="text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <div class="container">
     <div class="row">
       <div class="col">
         <h1 class="header">Programming Language Selector</h1>
         <h2 class="lead">Need help choosing a programming language?</h2>
-        <form>
+        <form id="languageForm">
           <div class="form-goup">
             <div class="difficulty">
               <h3 for="difficulty">How difficult do you want the language to be?</h3>
@@ -37,22 +39,22 @@
               <input type="radio" name="frontOrBack" value="1">Front End</input>
               <input type="radio" name="frontOrBack" value="2">Back End</input>
               <input type="radio" name="frontOrBack" value="3">Both</input>
+            </div>
+            <div class="type">
+              <h3 for="type">What type of language are you wanting to try?</h3>
+              <input type="radio" name="type" value="1">Whatever gives me the most control.</input>
+              <input type="radio" name="type" value="2">Something trendy.</input>
+              <input type="radio" name="type" value="3">One that is easy to use.</input>
+            </div>
           </div>
-          <div class="type">
-            <h3 for="type">What type of language are you wanting to try?</h3>
-            <input type="radio" name="type" value="1">Whatever gives me the most control.</input>
-            <input type="radio" name="type" value="2">Something trendy.</input>
-            <input type="radio" name="type" value="3">One that is easy to use.</input>
-          </div>
-        </div>
-        <button type="button" class="btn btn-primary" onclick="langType()">Submit</button>
-      <div id="result"></div>
-        <button id="tryAgain" class="btn btn-secondary">Try Again</button>
+          <button type="button" class="btn btn-primary" onclick="langType()">Submit</button>
+          <div id="result"></div>
+          <button id="tryAgain" class="btn btn-secondary">Try Again</button>
       </div>
-        </form>
-      </div>
+      </form>
     </div>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

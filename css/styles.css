@@ -14,12 +14,16 @@ body {
   border: none;
   box-shadow: 10px 10px 5px #1b1b1b;
   box-sizing: border-box;
-  background-color:#6c98ca;
+  background-color: #6c98ca;
   color: rgb(230, 230, 230);
 }
 p {
   margin: 0;
   padding: 0;
+}
+
+#languageForm{
+  margin: auto;
 }
 
 .difficulty {
@@ -31,7 +35,7 @@ p {
   border: none;
   box-shadow: 10px 10px 5px #1b1b1b;
   box-sizing: border-box;
-  background-color:#6c98ca;
+  background-color: #6c98ca;
   color: rgb(230, 230, 230);
 }
 
@@ -44,7 +48,7 @@ p {
   border: none;
   box-shadow: 10px 10px 5px #1b1b1b;
   box-sizing: border-box;
-  background-color:#6c98ca;
+  background-color: #6c98ca;
   color: rgb(230, 230, 230);
 }
 
@@ -57,7 +61,7 @@ p {
   border: none;
   box-shadow: 10px 10px 5px #1b1b1b;
   box-sizing: border-box;
-  background-color:#6c98ca;
+  background-color: #6c98ca;
   color: rgb(230, 230, 230);
 }
 
@@ -70,7 +74,7 @@ p {
   border: none;
   box-shadow: 10px 10px 5px #1b1b1b;
   box-sizing: border-box;
-  background-color:#6c98ca;
+  background-color: #6c98ca;
   color: rgb(230, 230, 230);
 }
 
@@ -83,12 +87,12 @@ p {
   border: none;
   box-shadow: 10px 10px 5px #1b1b1b;
   box-sizing: border-box;
-  background-color:#6c98ca;
+  background-color: #6c98ca;
   color: rgb(230, 230, 230);
 }
 
 .btn-primary {
-  background-color: #4CAF50; /* Green */
+  background-color: #4caf50; /* Green */
   color: white;
   padding: 12px 20px;
   border: none;
