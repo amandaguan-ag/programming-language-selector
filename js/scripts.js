@@ -1,112 +1,36 @@
-let javaScript = 0;
-let python = 0;
-let cSharp = 0;
-function difficultyMeter(difficulty){
-  if(difficulty === 'javaScript'){
-    javaScript+=1;
-    return javaScript
-  }
-  else if(difficulty === 'python'){
-    python+=1;
-    return python
-  }
-  else{
-    cSharp+=1
-    return cSharp
-  }
-}
-function whatMeter(what){
-  if(what === 'javaScript'){
-    javaScript+= 1;
-    return javaScript;
-  }
-  else if(what === 'python'){
-    python += 1;
-    return python;
-  }
-  else{
-    cSharp +=1
-    return cSharp;
-  }
-}
-function whyMeter(why){
-  if(why === 'javaScript'){
-    javaScript+=1;
-    return javaScript;
-  }
-  else if(why === 'python'){
-    python +=1;
-    return python;
-  }
-  else{
-    cSharp+= 1;
-    return cSharp;
-  }
-}
-function frontOrBackMeter(frontOrBack){
-  if(frontOrBack === 'javaScript'){
-    javaScript+=1;
-    return javaScript;
-  }
-  else if(frontOrBack === 'python'){
-    python +=1;
-    return python;
-  }
-  else{
-    cSharp+= 1;
-    return cSharp;
-  }
-}
-function typeMeter(type){
-  if(type === 'javaScript'){
-    javaScript+=1;
-    return javaScript;
-  }
-  else if(type === 'python'){
-    python +=1;
-    return python;
-  }
-  else{
-    cSharp+= 1;
-    return cSharp;
+window.onload = function() {
+  const form = document.querySelector('form');
+  form.onsubmit = function(e) {
+    e.preventDefault();
   }
 }
 
-$(document).ready(function(){
-  $("#languageForm").submit(function(event){
+function langType() {
+  let difficulty = document.querySelector('input[name="difficulty"]:checked').value;
+  let what = document.querySelector('input[name="what"]:checked').value;
+  let why = document.querySelector('input[name="why"]:checked').value;
+  let frontOrBack = document.querySelector('input[name="frontOrBack"]:checked').value;
+  let type = document.querySelector('input[name="type"]:checked').value;
 
-    event.preventDefault();
+  let langType;
+  if (difficulty === "1" && what === "1" && why === "1" && frontOrBack === "1" && type === "1") {
+    langType = "Javascript";
+  } else if (difficulty === "2" && what === "2" && why === "2" && frontOrBack === "2" && type === "2") {
+    langType = "Ruby";
+  } else if (difficulty === "3" && what === "3" && why === "3" && frontOrBack === "3" && type === "3") {
+    langType = "Python";
+  } else {
+    langType = "C#";
+  }
 
-    const difficulty = $("#difficulty").val();
-    const what = $("#what").val();
-    const why = $("#why").val();
-    const frontOrBack = $("#frontOrBack").val();
-    const type = $("#type").val();
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = "You should learn " + langType + ".";
 
-    difficultyMeter(difficulty);
-    whatMeter(what);
-    whyMeter(why);
-    frontOrBackMeter(frontOrBack);
-    typeMeter(type);
 
-    console.log(javaScript);
-    console.log(python);
-    console.log(cSharp);
+  document.getElementById("tryAgain").addEventListener("click", function(){
+  let form = document.querySelector("form");
+  form.reset();
 
-    if(javaScript === 5 || javaScript >= 3){
-      $(".result").show();
-      $("#javaScript").toggle();
-    }
-    else if(python === javaScript && python >= 3){
-      $(".result").show();
-      $("#python").toggle();
-    }
-    else if(cSharp === python && cSharp >= 3){
-      $(".result").show();
-      $("#cSharp").toggle();
-    }
-    else{
-      $(".result").hide();
-    }
-  })
-});
+  document.getElementById("result").innerHTML = "";
+  });
+}
